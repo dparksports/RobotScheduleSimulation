@@ -32,7 +32,7 @@ Robot Timing Simulation written in C++17
 # Output files
 ```markdown
 - visited.csv: a list of nodes tagged with visited robot IDs, in order.
-- measuredtimes.csv: a list of measured time of each circuit by each robot ID.
+- measuredtimes.csv: a list of measured time of each circuit by each robot ID, in seconds.
 ```
 
 # Output Log
