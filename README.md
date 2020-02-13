@@ -48,7 +48,7 @@ Robot Timing Simulation written in C++
 
 # Output Log
 ```markdown
-- The output logs each node visited by each robot task and its timing.
+- The output logs each node visited by each robot, its task and its run time.
 - This calculates a minium estimated travel time for each robot.
 - This verifies all assigned nodes in order of each circuit to be visited by a robot.
 ```
@@ -65,8 +65,19 @@ Robot Timing Simulation written in C++
 - This should be increased to a large wait time, if used in non-optimized, second timing resolution.
  
 # Verification
-- Given more time, need to add some form of verification and unit tests.
-- Currently, although none of formal verification is done, one may use the generating output log to validate all assigned nodes are read in correctly, visited correctly in order and validate the total time by verifying the currently accrued run time per robot.
+- When I get a chance, need to add some form of verification and unit tests.
+- Currently, although none of formal verification is done, one may use the generating output log to validate all assigned nodes are read in correctly and visited correctly in order and to validate the total time by verifying the currently accrued run time per robot.
+
+# Default Setup
+- Robots: 2 Types: Mover, Organizer
+- Mover Robot Tasks: Push, Pull
+- Organizer Robot Tasks: Pick, Place
+- Robot default count: 4
+- Node default count: 1000
+- Node default count per circuit: 1000
+- Default Timing Resolution: in milisecond resolution
+- Actual Measured Time for 1000 nodes/circuit with 4 robots: ~50 hours
+- Optimized, measured Time for 1000 nodes/circuit with 4 robots: ~1 minute
  
 # Code Spec
 
