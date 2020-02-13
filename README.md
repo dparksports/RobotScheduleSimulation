@@ -112,6 +112,5 @@ one node to the next.
 - Refactor the gating code of sleep_for with something else nice.
 
 # License
-- MIT License
 - Free to do whatever you wish with proper attribution.
 - Copyright 2020, all rights served.
