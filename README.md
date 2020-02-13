@@ -98,4 +98,4 @@ one node to the next.
 # License
 - MIT License
 - Free to do whatever you wish with proper attribution.
-- Copyright 2020 by Dan Park
+- Copyright 2020, all rights served.
