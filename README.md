@@ -27,20 +27,20 @@ Robot Timing Simulation written in C++17
 4. cmake..
 5. make
 6. ./robot 
-```markdown
+```
 
 # Output files
 ```markdown
 - visited.csv: a list of nodes tagged with visited robot IDs, in order.
 - measuredtimes.csv: a list of measured time of each circuit by each robot ID.
-```markdown
+```
 
 # Output Log
 ```markdown
 - The output logs each node visited by each robot task and its timing.
 - This app also calculates a minium estimated travel time for each robot.
 - This app also verifies all assigned nodes in order of each circuit to be visited by a robot.
-```markdown
+```
 
 # Timing Scale
 - To simulate the actual time in real time, change the current millisecond timing resolution to 'second timing resolution' like this in code.
