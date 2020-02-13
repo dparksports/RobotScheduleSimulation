@@ -5,12 +5,32 @@ Robot Timing Simulation written in C++17
 1) This measures how long a robot will take to complete a circuit of 1000 or more assigned nodes.
 2) This estimates the minimum amount of time it takes to compplete circuit, before a simulation run.
 3) Uses 3 input files:
+  - nodes_input.csv: describes 1000 or more node types.
+  - paths_input.csv: describes 1000 or more assigned nodes to be visited by each robot.
+  - robots_input.csv: described 4 or more robot types and its speed
+ 
+# steps to build the app.
+```markdown
+1. git clone git@github.com:dparksports/RobotTimingSimulation.git
+2. cd RobotTimingSimulation
+3. mkdir build;cd build
+4. cmake..
+5. make
+6. ./robot 
+```markdown
 
-a) nodes_input.csv: describes 1000 or more node types.
-b) paths_input.csv: describes 1000 or more assigned nodes to be visited by each robot.
-c) robots_input.csv: described 4 or more robot types and its speed
+# Output files
+```markdown
+- visited.csv: a list of nodes tagged with visited robot IDs, in order.
+- measuredtimes.csv: a list of measured time of each circuit by each robot ID.
+```markdown
 
-
+# Output Log
+```markdown
+- The output logs each node visited by each robot task and its timing.
+- This app also calculates a minium estimated travel time for each robot.
+- This app also verifies all assigned nodes in order of each circuit to be visited by a robot.
+```markdown
 
 
 # Requirements
