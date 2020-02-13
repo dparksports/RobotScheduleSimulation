@@ -57,7 +57,7 @@ Robot Timing Simulation written in C++
 - To simulate the actual time in real time, change the current millisecond timing resolution to 'second timing resolution' like this in code.
         std::this_thread::sleep_for(std::chrono::second(travelTime));
 - For example, simulating in this robot simulation in real time, in seconds, will take about 50 hours for 1000 assigned nodes per each robot, of all 4 robots.
-- The current setup optimizes the real time simulation, by reducing about 50 hours to 1 minute, by using the timing resolution in milliseconds.
+- The current setup optimizes the real time simulation, by reducing the entire run time of about 50 hours to about 1 minute, by using the milliseconds timing resolution.
 
 # Robot run per thread
 - Uses a detached thread per a robot run.
