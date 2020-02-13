@@ -14,7 +14,7 @@ Robot Timing Simulation written in C++
 2) It schedules more than 4 robots.  For example, it can handle 10 robots, instead of 4 default count. 
 3) It does a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
 4) It estimates the minimum run time, without running a real time simulation.
-5) It reduces a 50-hour simulation to a 1 minute run time, and still able to complete the entire 50 hour simulation, in hyper, real time.  This real time simulation is with 1000 nodes per robot with 4 robots.  
+5) It reduces a 50-hour simulation to a 1 minute run time, and still able to complete the entire 50 hour simulation, in hyper, real time.  This default real time simulation is with 1000 nodes per robot with 4 robots.  
 7) It handles a different count of assigned nodes per circuit, of multiple circuits.
 8) And more!
 
@@ -57,11 +57,11 @@ Robot Timing Simulation written in C++
 - To simulate the actual time in real time, change the current millisecond timing resolution to 'second timing resolution' like this in code.
         std::this_thread::sleep_for(std::chrono::second(travelTime));
 - For example, simulating in this robot simulation in real time, in seconds, will take about 50 hours for 1000 assigned nodes per each robot, of all 4 robots.
-- The current setup optimizes the real time simulation, by reducing the entire run time of about 50 hours to about 1 minute, by using the milliseconds timing resolution.
+- The current setup optimizes the real time simulation, by reducing the entire run time of about 50 hours to about 1 minute.
 
 # Robot run per thread
 - Uses a detached thread per a robot run.
-- Gated by sleep_for with 60 seconds to catch all thread completion, in millisecond timing resolution.
+- Gated by sleep_for with 60 seconds to catch all thread completion.
 - This should be increased to a large wait time, if used in non-optimized, second timing resolution.
  
 # Verification
