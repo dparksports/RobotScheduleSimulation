@@ -116,4 +116,5 @@ one node to the next.
 
 # License
 - Free to do whatever you wish with proper attribution.
+- See the license file for details.
 - Copyright 2020, all rights served.
