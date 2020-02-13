@@ -66,7 +66,7 @@ Robot Timing Simulation written in C++
  
 # Verification
 - When I get a chance, need to add some form of verification and unit tests.
-- Currently, although none of formal verification is done, one may use the generating output log to validate all assigned nodes are read in correctly and visited correctly in order and to validate the total time by verifying the currently accrued run time per robot.
+- Currently, although none of formal verification is added, one may use the generating output log to validate all assigned nodes are read in correctly and visited correctly in order and to validate the total time by verifying the currently accrued run time per robot.
 
 # Default Setup
 - Robots: 2 Types: Mover, Organizer
