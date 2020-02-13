@@ -75,7 +75,6 @@ Robot Timing Simulation written in C++
 - Robot default count: 4
 - Node default count: 1000
 - Node default count per circuit: 1000
-- Default Timing Resolution: in milisecond resolution
 - Actual Measured Time for 1000 nodes/circuit with 4 robots: ~50 hours
 - Optimized, measured Time for 1000 nodes/circuit with 4 robots: ~1 minute
  
