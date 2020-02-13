@@ -50,7 +50,7 @@ Robot Timing Simulation written in C++17
 
 # Code Spec
 
-This code models how long simpleton robots will take to complete a circuit. 
+This code models how long robots will take to complete a circuit of assigned nodes.
 
 There are two types of robots: organizer robots and mover robots. 
 
