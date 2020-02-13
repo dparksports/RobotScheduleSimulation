@@ -12,10 +12,9 @@ Robot Timing Simulation written in C++
 # Capability
 1) It can schedule more than 1000 assigned nodes to be visited by each robot. For example, it can handle 2000 assigned nodes per circuit, instead of 1000 default count.  
 2) It can schedule more than 4 robots.  For example, it can handle 10 robots, instead of 4 default count. 
-3) It can just estimate the minimum run time, without running a real time simulation.
-4) It can do a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
-5) It can optimize a real time simultion to 1 minutes from 50 hours.  
-6) This dramatically reduces the total run time by using the millisecond timing resolution.  This is default setup.
+3) It can do a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
+4) It can estimate the minimum run time, without running a real time simulation.
+5) It can optimize a real time simultion to 1 minutes from 50 hours.  This dramatically reduces the total run time by using the millisecond timing resolution.  This is default setup.
 7) Each robot can have different count of assigned nodes per circuit.
 8) and more!
 
