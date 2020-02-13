@@ -19,7 +19,7 @@ Robot Timing Simulation written in C++
 7) Each robot can have different count of assigned nodes per circuit.
 8) and more!
 
-# Collision Handling
+# Collision handling
 - Multiple robots may visit the same node at the same time.
 - To avoid an incident of collision, each robot uses an assigned billboard which shows the currently visiting node.
 - For example, when a robot visits a node, it marks the node number in its billboard.
@@ -52,13 +52,13 @@ Robot Timing Simulation written in C++
 - This app also verifies all assigned nodes in order of each circuit to be visited by a robot.
 ```
 
-# Timing Scale
+# Timing scale
 - To simulate the actual time in real time, change the current millisecond timing resolution to 'second timing resolution' like this in code.
         std::this_thread::sleep_for(std::chrono::second(travelTime));
 - For example, simulating in this robot simulation in real time, in seconds, will take about 50 hours for 1000 assigned nodes per each robot, of all 4 robots.
 - The current setup optimizes the real time simulation, by reducing about 50 hours to 2 minutes, by using the timing resolution in milliseconds.
 
-# Robot run Per Thread
+# Robot run per thread
 - Uses a detached thread per a robot run.
 - Gated by sleep_for with 60 seconds to catch all thread completion, in millisecond timing resolution.
 - This should be increased to a large wait time, if used in non-optimized, second timing resolution.
