@@ -73,10 +73,9 @@ Robot Timing Simulation written in C++
 - Mover Robot Tasks: Push, Pull
 - Organizer Robot Tasks: Pick, Place
 - Robot default count: 4
-- Node default count: 1000
 - Node default count per circuit: 1000
-- Actual Measured Time for 1000 nodes/circuit with 4 robots: ~50 hours
-- Optimized, measured Time for 1000 nodes/circuit with 4 robots: ~1 minute
+- Actual measured time for 1000 nodes/circuit with 4 robots: ~50 hours
+- Optimized measured time for 1000 nodes/circuit with 4 robots: ~1 minute
  
 # Code Spec
 
@@ -122,11 +121,11 @@ other nodes, all nodes are equidistant, and speed can be interpreted as the numb
 one node to the next.
 
 # Wish List
-- Given more time, will revisit the code to comment.  ;)
+- When I get a chance, I will add some comment.  ;)
 - Refactor one file into multiple classes to keep it simple.
 - Refactor the gating code of sleep_for with something else nice.
 
 # License
-- Free to do whatever you wish with proper attribution.
+- Feel free to do whatever you wish with proper attribution.
 - See the license file for details.
 - Copyright 2020, all rights served.
