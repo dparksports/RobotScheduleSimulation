@@ -26,7 +26,7 @@ Robot Timing Simulation written in C++
 - When the first robot exits the current node, after completing an assigned task on the current node, the lock guard automatically release the mutex in a function scope.
 - This is done by the first visiting robot to exclusively lock the assigned node at the scope of 'reserveBillboard' function, and releasing the exclusive lock, when it leaves the function scope.
 - When the mutex is released, any waiting robots on the node will resume, in order of arrival.
-- When multiple robots arrive at the same node at the same time, the first robot to arrive will catch the flag, or the mutex.
+- When multiple robots arrive at the same node at the same time, the first robot to arrive will catch the flag, or the mutex, and will perform its assigned task.
 
 # Steps to build the app.
 ```markdown
