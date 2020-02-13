@@ -14,9 +14,9 @@ Robot Timing Simulation written in C++
 2) It schedules more than 4 robots.  For example, it can handle 10 robots, instead of 4 default count. 
 3) It does a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
 4) It estimates the minimum run time, without running a real time simulation.
-5) It optimizes a real time simultion to 1 minutes from 50 hours.  This dramatically reduces the total run time by using the millisecond timing resolution.  This is default setup.
+5) It optimizes the default real time simultion in 1 minutes. This is reduced from a 50 hour, real time simulation with 1000 nodes per robot with 4 robots.  
 7) It handles a different count of assigned nodes per circuit, of multiple circuits.
-8) and more!
+8) And more!
 
 # Collision handling
 - Multiple robots may visit the same node at the same time.
