@@ -90,3 +90,12 @@ Each row should be “node_id,robot_id1,robot_id2...” where robot_idN is the N
 For simplicity that all robots start at the same time from a start node that is separate from the
 other nodes, all nodes are equidistant, and speed can be interpreted as the number of seconds it takes to get from
 one node to the next.
+
+# Wish List
+- Given more time, will revisit the code to comment.  ;)
+- Refactor one file into multiple classes to keep it simple.
+
+# License
+- MIT License
+- Free to do whatever you wish with proper attribution.
+- Copyright 2020 by Dan Park
