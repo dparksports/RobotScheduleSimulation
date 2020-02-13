@@ -3,30 +3,32 @@ Robot Timing Simulation written in C++
 
 # What it does
 1) This measures how long a robot will take to complete a circuit of 1000 or more assigned nodes.
-2) It also estimates the minimum amount of time it takes to complete circuit.
+2) It also estimates the minimum amount of time it takes to complete a circuit.
 3) Uses 3 input files:
   - nodes_input.csv: describes 1000 or more node types.
   - paths_input.csv: describes 1000 or more assigned nodes to be visited by each robot.
   - robots_input.csv: described 4 or more robot types and its speed
 
 # Capability
-1) It can schedule more than 1000 assigned nodes to be visited by each robot. For example, it can handle 2000 assigned nodes per circuit, instead of 1000 default count of nodes.  
+1) It can schedule more than 1000 assigned nodes to be visited by each robot. For example, it can handle 2000 assigned nodes per circuit, instead of 1000 default count.  
 2) It can schedule more than 4 robots.  For example, it can handle 10 robots, instead of 4 default count. 
 3) It can just estimate the minimum run time, without running a real time simulation.
 4) It can do a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
-5) It can optimize a real time simultion in millisecond timing resolution.  
-6) This dramatically reduces the total run time to 1 minute total from 50 hours.
+5) It can optimize a real time simultion to 1 minutes from 50 hours.  
+6) This dramatically reduces the total run time by using the millisecond timing resolution.  This is default setup.
 7) Each robot can have different count of assigned nodes per circuit.
 8) and more!
 
-# Collison Handling
+# Collision Handling
 - Multiple robots may visit the same node at the same time.
 - To avoid an incident of collision, each robot uses an assigned billboard which shows the currently visiting node.
-- For example, when a robot visits a nodes, it markes the node number in its billboard.
+- For example, when a robot visits a node, it marks the node number in its billboard.
 - When another robot visits the same node, it is guarded by a "lock_guard" by a "mutex".
-- Each billoard has its own lock_guard with a mutex.
+- When the first robot exits the current node, after completing an assigned task on the current node, the lock guard automatically release the mutex.
+- When the mutex is released, any waiting robots on the node will resume in order, of arrival.
+- This is done by the first visiting robot to exclusively lock the assigned node at the scope of 'reserveBillboard' function.  
 
-# steps to build the app.
+# Steps to build the app.
 ```markdown
 1. git clone git@github.com:dparksports/RobotTimingSimulation.git
 2. cd RobotTimingSimulation
