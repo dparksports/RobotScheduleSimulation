@@ -18,12 +18,14 @@ Robot Timing Simulation written in C++
 7) It handles a different count of assigned nodes per circuit, of multiple circuits.
 8) And more!
 
-# Collision handling
+# Collision avoidance
 - Multiple robots may visit the same node at the same time.
 - To avoid an incident of collision, each robot uses an assigned billboard which shows the currently visiting node.
 - For example, when a robot visits a node, it marks the node number in its billboard.
 - When another robot visits the same node, it is guarded by a "lock_guard" by a "mutex".
-- When the first robot exits the current node, after completing an assigned task on the current node, the lock guard automatically release the mutex in a function scope.
+- When the first robot exits the current node, after completing an assigned task on the current node, the lock guard automatically releases the mutex in a function scope.
+
+# Collision avoidance - Technical
 - This is done by the first visiting robot to exclusively lock the assigned node at the scope of 'reserveBillboard' function, and releasing the exclusive lock, when it leaves the function scope.
 - When the mutex is released, any waiting robots on the node will resume, in order of arrival.
 - When multiple robots arrive at the same node at the same time, the first robot to arrive will catch the flag, or the mutex, and will perform its assigned task.
