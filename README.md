@@ -47,8 +47,8 @@ Robot Timing Simulation written in C++
 # Output Log
 ```markdown
 - The output logs each node visited by each robot task and its timing.
-- This app also calculates a minium estimated travel time for each robot.
-- This app also verifies all assigned nodes in order of each circuit to be visited by a robot.
+- This calculates a minium estimated travel time for each robot.
+- This verifies all assigned nodes in order of each circuit to be visited by a robot.
 ```
 
 # Timing scale
@@ -61,6 +61,10 @@ Robot Timing Simulation written in C++
 - Uses a detached thread per a robot run.
 - Gated by sleep_for with 60 seconds to catch all thread completion, in millisecond timing resolution.
 - This should be increased to a large wait time, if used in non-optimized, second timing resolution.
+ 
+# Verification
+- Given more time, need to add some form of verification and unit tests.
+- Currently, although none of formal verification is done, one may use the generating output log to validate all assigned nodes are read in correctly, visited correctly in order and validate the total time by verifying the currently accrued run time per robot.
  
 # Code Spec
 
