@@ -15,10 +15,17 @@ Robot Timing Simulation written in C++17
 3) It can just estimate the minimum run time, without running a real time simulation.
 4) It can do a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
 5) It can optimize a real time simultion in millisecond timing resolution.  
-6) This dramatically reduces the total run time to 2 minutes total from 50 hours.
+6) This dramatically reduces the total run time to 1 minute total from 50 hours.
 7) Each robot can have different count of assigned nodes per circuit.
 8) and more!
- 
+
+# Collison Handling
+- Multiple robots may visit the same node at the same time.
+- To avoid an incident of collision, each robot uses an assigned billboard which shows the currently visiting node.
+- For example, when a robot visits a nodes, it markes the node number in its billboard.
+- When another robot visits the same node, it is guarded by a "lock_guard" by a "mutex".
+- Each billoard has its own lock_guard with a mutex.
+
 # steps to build the app.
 ```markdown
 1. git clone git@github.com:dparksports/RobotTimingSimulation.git
@@ -48,6 +55,11 @@ Robot Timing Simulation written in C++17
 - For example, simulating in this robot simulation in real time, in seconds, will take about 50 hours for 1000 assigned nodes per each robot, of all 4 robots.
 - The current setup optimizes the real time simulation, by reducing about 50 hours to 2 minutes, by using the timing resolution in milliseconds.
 
+# Robot run Per Thread
+- Uses a detached thread per a robot run.
+- Gated by sleep_for with 60 seconds to catch all thread completion, in millisecond timing resolution.
+- This should be increased to a large wait time, if used in non-optimized, second timing resolution.
+ 
 # Code Spec
 
 This code models how long robots will take to complete a circuit of assigned nodes.
@@ -94,6 +106,7 @@ one node to the next.
 # Wish List
 - Given more time, will revisit the code to comment.  ;)
 - Refactor one file into multiple classes to keep it simple.
+- Refactor the gating code of sleep_for with something else nice.
 
 # License
 - MIT License
