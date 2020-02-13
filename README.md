@@ -3,11 +3,21 @@ Robot Timing Simulation written in C++17
 
 # What it does
 1) This measures how long a robot will take to complete a circuit of 1000 or more assigned nodes.
-2) This estimates the minimum amount of time it takes to compplete circuit, before a simulation run.
+2) It also estimates the minimum amount of time it takes to complete circuit.
 3) Uses 3 input files:
   - nodes_input.csv: describes 1000 or more node types.
   - paths_input.csv: describes 1000 or more assigned nodes to be visited by each robot.
   - robots_input.csv: described 4 or more robot types and its speed
+
+# Capability
+1) It can schedule more than 1000 assigned nodes to be visited by each robot. For example, it can handle 2000 assigned nodes per circuit, instead of 1000 default count of nodes.  
+2) It can schedule more than 4 robots.  For example, it can handle 10 robots, instead of 4 default count. 
+3) It can just estimate the minimum run time, without running a real time simulation.
+4) It can do a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
+5) It can optimize a real time simultion in millisecond timing resolution.  
+6) This dramatically reduces the total run time to 2 minutes total from 50 hours.
+7) Each robot can have different count of assigned nodes per circuit.
+8) and more!
  
 # steps to build the app.
 ```markdown
@@ -38,7 +48,7 @@ Robot Timing Simulation written in C++17
 - For example, simulating in this robot simulation in real time, in seconds, will take about 50 hours for 1000 assigned nodes per each robot, of all 4 robots.
 - The current setup optimizes the real time simulation, by reducing about 50 hours to 2 minutes, by using the timing resolution in milliseconds.
 
-# Requirements
+# Code Spec
 
 This code models how long simpleton robots will take to complete a circuit. 
 
