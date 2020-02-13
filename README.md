@@ -25,8 +25,9 @@ Robot Timing Simulation written in C++
 - For example, when a robot visits a node, it marks the node number in its billboard.
 - When another robot visits the same node, it is guarded by a "lock_guard" by a "mutex".
 - When the first robot exits the current node, after completing an assigned task on the current node, the lock guard automatically release the mutex.
-- When the mutex is released, any waiting robots on the node will resume in order, of arrival.
-- This is done by the first visiting robot to exclusively lock the assigned node at the scope of 'reserveBillboard' function.  
+- When the mutex is released, any waiting robots on the node will resume, in order of arrival.
+- This is done by the first visiting robot to exclusively lock the assigned node at the scope of 'reserveBillboard' function.
+- When multiple robots arrive at the same node at the same time, the first robot to arrive will catch the flag, or the mutex.
 
 # Steps to build the app.
 ```markdown
