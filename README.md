@@ -9,7 +9,7 @@ Robot Timing Simulation written in C++
   - paths_input.csv: describes 1000 or more assigned nodes to be visited by each robot.
   - robots_input.csv: described 4 or more robot types and its speed
 
-# Capability
+# Capabilities
 1) It schedules more than 1000 assigned nodes to be visited by each robot. For example, it can handle 2000 assigned nodes per circuit, instead of 1000 default count.  
 2) It schedules more than 4 robots.  For example, it can handle 10 robots, instead of 4 default count. 
 3) It does a real time simulation.  For example, the default setup of 1000 nodes per robot with 4 robots takes about 50 hours.
@@ -104,7 +104,7 @@ the same time. If this happens, whichever robot gets there first gets to perform
 must wait until the first robot has left the node to start their action. In the event of a tie, any Organizer robot can
 go first.
 
-This application that takes in 3 csv files and produces two new csv files.
+This takes in 3 csv files and produces two new csv files.
 
 The first file in the input describes the robots: “id,robot_type,speed”. 
 The second file describes the nodes: “id,node_type”. 
