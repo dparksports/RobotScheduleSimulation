@@ -89,7 +89,7 @@ Each robot will perform different actions at different nodes which require diffe
 • Organizer robots can perform a pick action (30 sec) and a place action (45 sec).
 • Mover robots can perform a push action (20 sec) and a pull action (35 sec).
 
-For the purpose of this challenge there will be two types of nodes: A nodes and B nodes.
+For a simple case, there are only two types of nodes: A nodes and B nodes.
 
 At A nodes:
 • Organizer robots must perform a pick action.
