@@ -128,5 +128,5 @@ one node to the next.
 # License
 - Feel free to do whatever you wish with proper attribution.
 - See the license file for details.
-- Copyright 2020, all rights served.
+- Copyright 2020, all rights reserved.
 
