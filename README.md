@@ -83,7 +83,6 @@ Estimates and simulates a robot work schedule before commencement.
 - Refactor the gating code of sleep_for with something else nice.
 
 # License
-- Feel free to do whatever you wish with proper attribution.
 - See the license file for details.
-- Copyright 2020, all rights reserved.
+- Copyright 2020, Dan Park, all rights reserved.
 
