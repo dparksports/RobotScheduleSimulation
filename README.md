@@ -1,5 +1,5 @@
 # Robot Schedule Simulation
-Robot Schedule Simulation written in C++
+Estimates and simulates a robot work schedule before commencement.
 
 # What it does
 1) This measures how long a robot will take to complete a circuit of 1000 or more assigned nodes.
