@@ -1,4 +1,4 @@
-# Robot Schedule Simulation
+# Robot Simulation
 Estimates and simulates a robot work schedule before commencement.
 
 # What it does
