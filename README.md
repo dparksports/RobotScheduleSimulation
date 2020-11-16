@@ -1,5 +1,4 @@
-# Robot Simulation
-Estimates and simulates a robot work schedule before commencement.
+# Robot Task Scheduler
 
 # What it does
 1) This measures how long a robot will take to complete a circuit of 1000 or more assigned nodes.
