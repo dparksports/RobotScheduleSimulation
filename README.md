@@ -1,4 +1,4 @@
-# Robot Task Scheduler
+# Robot Schedule Simulation
 
 # What it does
 1) This measures how long a robot will take to complete a circuit of 1000 or more assigned nodes.
